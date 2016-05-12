@@ -23,3 +23,7 @@
    gulpjs.com/plugins
 
 6. npm install --save-dev gulp-uglify
+   gulp-uglify is to minify javascript.
+   
+7. We can give the default gulp task an array in order
+   to run multiple tasks.
