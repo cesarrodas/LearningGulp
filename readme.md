@@ -48,3 +48,13 @@
 
 14. You can avoid installing plumber by placing an on error
     event before gulp.dest. You can also create a func.
+
+15. Implemeting live reload. You need the live reload
+    extension for your browser.
+    
+16. npm install --save-dev gulp-livereload. We can add a
+    pipe method with livereload to refresh when saved.
+    
+17. Compressing images with gulp.
+
+18. npm install --save-dev gulp-imagemin
