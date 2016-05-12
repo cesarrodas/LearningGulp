@@ -3,7 +3,8 @@ var gulp = require('gulp'),
     sass = require('gulp-ruby-sass'),
     plumber = require('gulp-plumber'),
     livereload = require('gulp-livereload'),
-    imagemin = require('gulp-imagemin');
+    imagemin = require('gulp-imagemin'),
+    prefix = require('gulp-autoprefixer');
 
 function errorLog(error) {
   console.error.bind(error);
@@ -23,9 +24,10 @@ gulp.task('scripts', function(){
 gulp.task('styles', function(){
   gulp.src('scss/**/.scss') //all scss files in folder
     .pipe(sass({
-      style: 'compressed'
+      style: 'expanded' // compressed
     }))
     .on('error', errorLog)
+    .pipe(prefix('last 2 versions'))
     .pipe(gulp.dest('css/'))
     .pipe(livereload());
 });
