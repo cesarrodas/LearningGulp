@@ -27,3 +27,17 @@
    
 7. We can give the default gulp task an array in order
    to run multiple tasks.
+   
+8. To run a named task, you can type gulp and then 
+   the name of the task.
+
+9. You can create a watch task to watch a file. This 
+   can also call another task by also giving it an
+   array.
+   
+10. npm install --save-dev gulp-ruby-sass
+    We are editing our styles task to compile sass.
+
+11. We can make an almost identical task to compile
+    our sass files.
+
