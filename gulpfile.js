@@ -3,6 +3,11 @@ var gulp = require('gulp'),
     sass = require('gulp-ruby-sass'),
     plumber = require('gulp-plumber');
 
+function errorLog(error) {
+  console.error.bind(error);
+  this.emit('end');
+}
+
 // Scripts Task
 // Uglifies
 gulp.task('scripts', function(){
@@ -15,10 +20,10 @@ gulp.task('scripts', function(){
 // Styles
 gulp.task('styles', function(){
   gulp.src('scss/**/.scss') //all scss files in folder
-    .pipe(plumber())
     .pipe(sass({
       style: 'compressed'
     }))
+    .on('error', errorLog)
     .pipe(gulp.dest('css/'));
 });
 

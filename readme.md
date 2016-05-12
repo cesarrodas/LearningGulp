@@ -45,3 +45,6 @@
     even if you save incomplete code.
     
 13. npm install --save-dev gulp-plumber
+
+14. You can avoid installing plumber by placing an on error
+    event before gulp.dest. You can also create a func.
