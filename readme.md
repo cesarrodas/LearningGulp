@@ -41,3 +41,7 @@
 11. We can make an almost identical task to compile
     our sass files.
 
+12. The plumber package allows you to keep watching files
+    even if you save incomplete code.
+    
+13. npm install --save-dev gulp-plumber
